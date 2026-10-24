@@ -1,8 +1,8 @@
 -- TODO ----------
 -- set up debugger dap
 -- set up git
--- set up codeactions
--- set up treesitter
+-- set up codeactions (done natively/partially)
+-- set up treesitter (done)
 -- set lualine square
 
 -- CONFIGS ----------
@@ -59,7 +59,9 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' }) 
-vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>')
+vim.keymap.set('n', '<C-n>', '<Cmd>Neotree toggle<CR>') -- toggle neotree
+vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {  desc = "Code action",}) -- code actions
 
 -- PLUGIN CONFIGS----------
 -- blink.cpm ----------
