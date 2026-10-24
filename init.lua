@@ -34,7 +34,9 @@ vim.pack.add{
 
 }
 
+-- plugins setup
 require('nvim-treesitter').setup({})
+require('nvim-treesitter').install({'lua','python','javascript'})
 require('neo-tree').setup({})
 require('lualine').setup{ options = {theme = 'auto'}}
 require('telescope').setup()
