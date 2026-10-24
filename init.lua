@@ -24,6 +24,7 @@ vim.pack.add{
 	src = "https://github.com/saghen/blink.cmp",
 	version = vim.version.range("^1"),
   }, -- autocompletion
+  {src = "https://github.com/nvim-treesitter/nvim-treesitter.git"}, -- plugin for tree sitter parsing
 
   -- dependencies
     "https://github.com/nvim-lua/plenary.nvim",
@@ -33,6 +34,7 @@ vim.pack.add{
 
 }
 
+require('nvim-treesitter').setup({})
 require('neo-tree').setup({})
 require('lualine').setup{ options = {theme = 'auto'}}
 require('telescope').setup()
